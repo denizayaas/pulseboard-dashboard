@@ -7,10 +7,11 @@ import {
   Wallet,
   Zap,
 } from 'lucide-react'
-
 import type {
   ActivityItem,
+  CampaignItem,
   DateRange,
+  GoalItem,
   ProductItem,
   RevenueItem,
   StatItem,
@@ -44,7 +45,6 @@ export const statsByRange: Record<DateRange, StatItem[]> = {
       icon: Activity,
     },
   ],
-
   'Last 30 days': [
     {
       title: 'Total Revenue',
@@ -71,7 +71,6 @@ export const statsByRange: Record<DateRange, StatItem[]> = {
       icon: Activity,
     },
   ],
-
   'Last 12 months': [
     {
       title: 'Total Revenue',
@@ -186,5 +185,61 @@ export const activities: ActivityItem[] = [
     description: 'Referral campaign reached 92% of target.',
     time: '3 hours ago',
     icon: CheckCircle2,
+  },
+]
+
+export const goalsData: GoalItem[] = [
+  {
+    title: 'Revenue Goal',
+    value: '$128.4K / $150K',
+    progress: 86,
+    description: 'Monthly revenue target completion',
+  },
+  {
+    title: 'User Growth',
+    value: '24.8K / 30K',
+    progress: 82,
+    description: 'Active user acquisition progress',
+  },
+  {
+    title: 'Conversion Target',
+    value: '7.8% / 10%',
+    progress: 78,
+    description: 'Checkout conversion performance',
+  },
+]
+
+export const campaignData: CampaignItem[] = [
+  {
+    name: 'Summer Growth Push',
+    channel: 'Paid Ads',
+    spend: '$8,400',
+    revenue: '$24,900',
+    status: 'Active',
+    roi: '2.9x',
+  },
+  {
+    name: 'Referral Boost',
+    channel: 'Referral',
+    spend: '$3,200',
+    revenue: '$13,700',
+    status: 'Active',
+    roi: '4.2x',
+  },
+  {
+    name: 'Enterprise Outreach',
+    channel: 'Email',
+    spend: '$5,100',
+    revenue: '$18,600',
+    status: 'Completed',
+    roi: '3.6x',
+  },
+  {
+    name: 'Social Awareness',
+    channel: 'Social',
+    spend: '$2,800',
+    revenue: '$6,400',
+    status: 'Paused',
+    roi: '2.2x',
   },
 ]

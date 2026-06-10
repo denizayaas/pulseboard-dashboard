@@ -33,3 +33,19 @@ export type ActivityItem = {
 }
 
 export type DateRange = 'Last 7 days' | 'Last 30 days' | 'Last 12 months'
+
+export type GoalItem = {
+  title: string
+  value: string
+  progress: number
+  description: string
+}
+
+export type CampaignItem = {
+  name: string
+  channel: string
+  spend: string
+  revenue: string
+  status: 'Active' | 'Paused' | 'Completed'
+  roi: string
+}
