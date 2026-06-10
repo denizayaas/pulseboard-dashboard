@@ -1,5 +1,7 @@
 # PulseBoard Dashboard
 
+[Live Demo](https://pulseboard-dashboard.vercel.app/)
+
 PulseBoard is a modern analytics dashboard built with React, TypeScript, Tailwind CSS, and Recharts.  
 It was developed as a portfolio showcase project to demonstrate dashboard UI development, typed data structures, reusable components, responsive layouts, and interactive chart filtering.
 
