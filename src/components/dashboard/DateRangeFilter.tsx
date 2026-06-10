@@ -1,11 +1,12 @@
 import { CalendarDays } from 'lucide-react'
+import type { DateRange } from '../../types/dashboard'
 
 type DateRangeFilterProps = {
-    activeRange: string
-    onRangeChange: (range: string) => void
+  activeRange: DateRange
+  onRangeChange: (range: DateRange) => void
 }
 
-const ranges = ['Last 7 days', 'Last 30 days', 'Last 12 months']
+const ranges: DateRange[] = ['Last 7 days', 'Last 30 days', 'Last 12 months']
 
 export function DateRangeFilter({
     activeRange,

@@ -1,5 +1,3 @@
-import { revenueData } from '../../data/dashboardData'
-
 import {
   Area,
   AreaChart,
@@ -9,10 +7,13 @@ import {
   XAxis,
   YAxis,
 } from 'recharts'
+import type { RevenueItem } from '../../types/dashboard'
 
+type RevenueChartProps = {
+  data: RevenueItem[]
+}
 
-
-export function RevenueChart() {
+export function RevenueChart({ data }: RevenueChartProps) {
   return (
     <article className="rounded-2xl border border-slate-800 bg-slate-900 p-5 shadow-xl">
       <div className="mb-6 flex items-center justify-between">
@@ -30,7 +31,7 @@ export function RevenueChart() {
 
       <div className="h-80">
         <ResponsiveContainer width="100%" height="100%">
-          <AreaChart data={revenueData}>
+          <AreaChart data={data}>
             <defs>
               <linearGradient id="revenueGradient" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#06b6d4" stopOpacity={0.35} />
@@ -61,7 +62,10 @@ export function RevenueChart() {
                 borderRadius: '12px',
                 color: '#e2e8f0',
               }}
-              formatter={(value) => [`$${Number(value).toLocaleString()}`, 'Revenue']}
+              formatter={(value) => [
+                `$${Number(value).toLocaleString()}`,
+                'Revenue',
+              ]}
             />
 
             <Area

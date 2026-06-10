@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { stats } from './data/dashboardData'
+import { revenueDataByRange, stats } from './data/dashboardData'
 import { Header } from './components/layout/Header'
 import { Sidebar } from './components/layout/Sidebar'
 import { StatCard } from './components/dashboard/StatCard'
@@ -9,10 +9,11 @@ import { TrafficChart } from './components/dashboard/TrafficChart'
 import { TopProducts } from './components/dashboard/TopProducts'
 import { DateRangeFilter } from './components/dashboard/DateRangeFilter'
 import { RecentActivity } from './components/dashboard/RecentActivity'
+import type { DateRange } from './types/dashboard'
 
 
 function App() {
-  const [activeRange, setActiveRange] = useState('Last 30 days')
+  const [activeRange, setActiveRange] = useState<DateRange>('Last 30 days')
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
@@ -41,7 +42,7 @@ function App() {
             </div>
             <div className="mt-6 grid gap-6 xl:grid-cols-3">
               <div className="xl:col-span-2">
-                <RevenueChart />
+                <RevenueChart data={revenueDataByRange[activeRange]} />
               </div>
               <TrafficChart />
             </div>

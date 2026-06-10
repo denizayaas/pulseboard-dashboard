@@ -10,6 +10,7 @@ import {
 
 import type {
   ActivityItem,
+  DateRange,
   ProductItem,
   RevenueItem,
   StatItem,
@@ -43,16 +44,33 @@ export const stats: StatItem[] = [
   },
 ]
 
-export const revenueData: RevenueItem[] = [
-  { month: 'Jan', revenue: 32000 },
-  { month: 'Feb', revenue: 41000 },
-  { month: 'Mar', revenue: 38000 },
-  { month: 'Apr', revenue: 52000 },
-  { month: 'May', revenue: 61000 },
-  { month: 'Jun', revenue: 74000 },
-  { month: 'Jul', revenue: 69000 },
-  { month: 'Aug', revenue: 88000 },
-]
+export const revenueDataByRange: Record<DateRange, RevenueItem[]> = {
+  'Last 7 days': [
+    { month: 'Mon', revenue: 12800 },
+    { month: 'Tue', revenue: 14600 },
+    { month: 'Wed', revenue: 13900 },
+    { month: 'Thu', revenue: 17200 },
+    { month: 'Fri', revenue: 18400 },
+    { month: 'Sat', revenue: 21100 },
+    { month: 'Sun', revenue: 23600 },
+  ],
+  'Last 30 days': [
+    { month: 'Week 1', revenue: 42000 },
+    { month: 'Week 2', revenue: 51500 },
+    { month: 'Week 3', revenue: 58200 },
+    { month: 'Week 4', revenue: 67400 },
+  ],
+  'Last 12 months': [
+    { month: 'Jan', revenue: 32000 },
+    { month: 'Feb', revenue: 41000 },
+    { month: 'Mar', revenue: 38000 },
+    { month: 'Apr', revenue: 52000 },
+    { month: 'May', revenue: 61000 },
+    { month: 'Jun', revenue: 74000 },
+    { month: 'Jul', revenue: 69000 },
+    { month: 'Aug', revenue: 88000 },
+  ],
+}
 
 export const trafficData: TrafficItem[] = [
   { name: 'Organic', value: 42, color: '#06b6d4' },
