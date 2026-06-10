@@ -8,7 +8,15 @@ import {
   Zap,
 } from 'lucide-react'
 
-export const stats = [
+import type {
+  ActivityItem,
+  ProductItem,
+  RevenueItem,
+  StatItem,
+  TrafficItem,
+} from '../types/dashboard'
+
+export const stats: StatItem[] = [
   {
     title: 'Total Revenue',
     value: '$128.4K',
@@ -35,7 +43,7 @@ export const stats = [
   },
 ]
 
-export const revenueData = [
+export const revenueData: RevenueItem[] = [
   { month: 'Jan', revenue: 32000 },
   { month: 'Feb', revenue: 41000 },
   { month: 'Mar', revenue: 38000 },
@@ -46,14 +54,14 @@ export const revenueData = [
   { month: 'Aug', revenue: 88000 },
 ]
 
-export const trafficData = [
+export const trafficData: TrafficItem[] = [
   { name: 'Organic', value: 42, color: '#06b6d4' },
   { name: 'Social', value: 28, color: '#8b5cf6' },
   { name: 'Referral', value: 18, color: '#22c55e' },
   { name: 'Paid Ads', value: 12, color: '#f97316' },
 ]
 
-export const products = [
+export const products: ProductItem[] = [
   {
     name: 'Pulse Pro Plan',
     category: 'Subscription',
@@ -80,7 +88,7 @@ export const products = [
   },
 ]
 
-export const activities = [
+export const activities: ActivityItem[] = [
   {
     title: 'New enterprise subscription',
     description: 'Pulse Pro Plan purchased by Acme Inc.',
