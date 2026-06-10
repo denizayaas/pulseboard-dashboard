@@ -18,7 +18,10 @@ export function Header() {
       </div>
 
       <div className="flex items-center gap-3">
-        <div className="hidden items-center gap-2 rounded-xl border border-slate-800 bg-slate-900 px-4 py-2 text-slate-400 md:flex">
+        <div
+          title="Demo search field"
+          className="hidden items-center gap-2 rounded-xl border border-slate-800 bg-slate-900 px-4 py-2 text-slate-400 md:flex"
+        >
           <Search size={18} />
           <span className="text-sm">Search dashboard...</span>
         </div>

@@ -1,16 +1,16 @@
 import { BarChart3, Home, LineChart, Settings, Wallet } from 'lucide-react'
 
 const menuItems = [
-  { label: 'Overview', icon: Home },
-  { label: 'Analytics', icon: BarChart3 },
-  { label: 'Revenue', icon: Wallet },
-  { label: 'Reports', icon: LineChart },
-  { label: 'Settings', icon: Settings },
+  { label: 'Overview', icon: Home, href: '#overview' },
+  { label: 'Analytics', icon: BarChart3, href: '#analytics' },
+  { label: 'Revenue', icon: Wallet, href: '#revenue' },
+  { label: 'Reports', icon: LineChart, href: '#reports' },
+  { label: 'Settings', icon: Settings, href: '#settings' },
 ]
 
 export function Sidebar() {
   return (
-    <aside className="hidden min-h-screen w-72 border-r border-slate-800 bg-slate-950 px-5 py-6 lg:block">
+    <aside className="hidden min-h-screen w-72 shrink-0 border-r border-slate-800 bg-slate-950 px-5 py-6 lg:sticky lg:top-0 lg:block">
       <div>
         <p className="text-sm uppercase tracking-[0.35em] text-cyan-400">
           PulseBoard
@@ -25,13 +25,14 @@ export function Sidebar() {
           const Icon = item.icon
 
           return (
-            <button
+            <a
               key={item.label}
+              href={item.href}
               className="flex w-full items-center gap-3 rounded-xl px-4 py-3 text-left text-sm font-medium text-slate-400 transition hover:bg-slate-900 hover:text-white"
             >
               <Icon size={18} />
               {item.label}
-            </button>
+            </a>
           )
         })}
       </nav>

@@ -10,6 +10,7 @@ import { TopProducts } from './components/dashboard/TopProducts'
 import { DateRangeFilter } from './components/dashboard/DateRangeFilter'
 import { RecentActivity } from './components/dashboard/RecentActivity'
 import type { DateRange } from './types/dashboard'
+import { SettingsPanel } from './components/dashboard/SettingsPanel'
 
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
               onRangeChange={setActiveRange}
             />
 
-            <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+            <div id="overview" className="scroll-mt-6 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
               {statsByRange[activeRange].map((stat) => (
                 <StatCard
                   key={stat.title}
@@ -40,17 +41,23 @@ function App() {
                 />
               ))}
             </div>
-            <div className="mt-6 grid gap-6 xl:grid-cols-3">
-              <div className="xl:col-span-2">
+
+            <div id="analytics" className="mt-6 scroll-mt-6 grid gap-6 xl:grid-cols-3">
+              <div id="revenue" className="scroll-mt-6 xl:col-span-2">
                 <RevenueChart data={revenueDataByRange[activeRange]} />
               </div>
+
               <TrafficChart />
             </div>
-            <div className="mt-6 grid gap-6 xl:grid-cols-2">
+
+            <div id="reports" className="mt-6 scroll-mt-6 grid gap-6 xl:grid-cols-2">
               <TopProducts />
               <RecentActivity />
             </div>
 
+            <div className="mt-6">
+              <SettingsPanel />
+            </div>
           </section>
         </main>
       </div>
