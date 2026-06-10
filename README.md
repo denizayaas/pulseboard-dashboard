@@ -61,3 +61,100 @@ src/
   App.tsx
   index.css
   main.tsx
+```
+
+## 🚀 Getting Started
+
+Follow the steps below to run PulseBoard locally.
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/denizayaas/pulseboard-dashboard.git
+```
+
+### 2. Navigate to the project folder
+
+```bash
+cd pulseboard-dashboard
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+The project will run locally on:
+
+```bash
+http://localhost:5173
+```
+
+### 5. Build for production
+
+```bash
+npm run build
+```
+
+### 6. Preview the production build
+
+```bash
+npm run preview
+```
+
+---
+
+## 🧠 Key Implementation Details
+
+PulseBoard is built with a clean and maintainable frontend structure. The dashboard uses a strongly typed `DateRange` model to control selected time periods across the application.
+
+When the user changes the selected date range, multiple parts of the dashboard update together:
+
+* Stat cards
+* Revenue chart data
+* AI performance insight content
+* Date range summary text
+
+Dashboard data is separated from UI components inside:
+
+```txt
+src/data/dashboardData.ts
+```
+
+Shared TypeScript models are defined inside:
+
+```txt
+src/types/dashboard.ts
+```
+
+This keeps the project easier to scale, improves readability, and makes the component architecture cleaner.
+
+---
+
+## 🎯 Portfolio Purpose
+
+This project was developed as a frontend portfolio showcase to demonstrate practical dashboard development skills.
+
+It highlights:
+
+* React component architecture
+* TypeScript data modeling
+* Responsive dashboard layout
+* Data visualization with Recharts
+* Tailwind CSS based UI design
+* State-driven interactive UI behavior
+* Reusable and maintainable component structure
+* Production-ready Vite build workflow
+
+PulseBoard is designed to look and feel like a modern SaaS analytics product while remaining focused on frontend implementation.
+
+
+Author
+Deniz Ayas
