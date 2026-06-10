@@ -1,73 +1,63 @@
-# React + TypeScript + Vite
+# PulseBoard Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+PulseBoard is a modern analytics dashboard built with React, TypeScript, Tailwind CSS, and Recharts.  
+It was developed as a portfolio showcase project to demonstrate dashboard UI development, typed data structures, reusable components, responsive layouts, and interactive chart filtering.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+PulseBoard presents a SaaS-style analytics experience with dynamic business metrics, interactive revenue charts, campaign performance data, progress tracking, activity feeds, and workspace settings.
 
-## React Compiler
+The project focuses on clean component structure, modern UI patterns, and frontend-only data visualization.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Responsive dashboard layout
+- Sidebar navigation with section anchors
+- Dynamic date range filter
+- Date range based stat cards
+- Interactive revenue chart with Recharts
+- Traffic source donut chart
+- AI-style performance insight banner
+- Campaign ROI table
+- Business goals progress panel
+- Top products section
+- Recent activity feed
+- Interactive settings toggles
+- Typed dashboard data models with TypeScript
+- Production build support with Vite
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React
+- Vite
+- TypeScript
+- Tailwind CSS
+- Recharts
+- Lucide React
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Project Structure
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```txt
+src/
+  components/
+    dashboard/
+      CampaignTable.tsx
+      DateRangeFilter.tsx
+      GoalsPanel.tsx
+      KpiInsight.tsx
+      RecentActivity.tsx
+      RevenueChart.tsx
+      SettingsPanel.tsx
+      StatCard.tsx
+      TopProducts.tsx
+      TrafficChart.tsx
+    layout/
+      Header.tsx
+      Sidebar.tsx
+  data/
+    dashboardData.ts
+  types/
+    dashboard.ts
+  App.tsx
+  index.css
+  main.tsx
