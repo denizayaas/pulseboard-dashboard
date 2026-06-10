@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { revenueDataByRange, stats } from './data/dashboardData'
+import { revenueDataByRange, statsByRange } from './data/dashboardData'
 import { Header } from './components/layout/Header'
 import { Sidebar } from './components/layout/Sidebar'
 import { StatCard } from './components/dashboard/StatCard'
@@ -30,7 +30,7 @@ function App() {
             />
 
             <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-              {stats.map((stat) => (
+              {statsByRange[activeRange].map((stat) => (
                 <StatCard
                   key={stat.title}
                   title={stat.title}

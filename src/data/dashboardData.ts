@@ -17,32 +17,88 @@ import type {
   TrafficItem,
 } from '../types/dashboard'
 
-export const stats: StatItem[] = [
-  {
-    title: 'Total Revenue',
-    value: '$128.4K',
-    change: '+12.5% from last month',
-    icon: Wallet,
-  },
-  {
-    title: 'Active Users',
-    value: '24,892',
-    change: '+8.2% from last month',
-    icon: Users,
-  },
-  {
-    title: 'Transactions',
-    value: '18,340',
-    change: '+5.7% from last month',
-    icon: CreditCard,
-  },
-  {
-    title: 'Conversion Rate',
-    value: '7.8%',
-    change: '+2.1% from last month',
-    icon: Activity,
-  },
-]
+export const statsByRange: Record<DateRange, StatItem[]> = {
+  'Last 7 days': [
+    {
+      title: 'Total Revenue',
+      value: '$23.6K',
+      change: '+6.4% from last week',
+      icon: Wallet,
+    },
+    {
+      title: 'Active Users',
+      value: '4,218',
+      change: '+3.8% from last week',
+      icon: Users,
+    },
+    {
+      title: 'Transactions',
+      value: '2,940',
+      change: '+4.2% from last week',
+      icon: CreditCard,
+    },
+    {
+      title: 'Conversion Rate',
+      value: '6.9%',
+      change: '+1.1% from last week',
+      icon: Activity,
+    },
+  ],
+
+  'Last 30 days': [
+    {
+      title: 'Total Revenue',
+      value: '$67.4K',
+      change: '+9.8% from last month',
+      icon: Wallet,
+    },
+    {
+      title: 'Active Users',
+      value: '12,486',
+      change: '+6.1% from last month',
+      icon: Users,
+    },
+    {
+      title: 'Transactions',
+      value: '8,720',
+      change: '+5.4% from last month',
+      icon: CreditCard,
+    },
+    {
+      title: 'Conversion Rate',
+      value: '7.3%',
+      change: '+1.6% from last month',
+      icon: Activity,
+    },
+  ],
+
+  'Last 12 months': [
+    {
+      title: 'Total Revenue',
+      value: '$128.4K',
+      change: '+12.5% from last year',
+      icon: Wallet,
+    },
+    {
+      title: 'Active Users',
+      value: '24,892',
+      change: '+8.2% from last year',
+      icon: Users,
+    },
+    {
+      title: 'Transactions',
+      value: '18,340',
+      change: '+5.7% from last year',
+      icon: CreditCard,
+    },
+    {
+      title: 'Conversion Rate',
+      value: '7.8%',
+      change: '+2.1% from last year',
+      icon: Activity,
+    },
+  ],
+}
 
 export const revenueDataByRange: Record<DateRange, RevenueItem[]> = {
   'Last 7 days': [
